@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Message Counter</h1>
+        <form id="messageForm" action="save_message.php" method="POST">
+            <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+            <div class="counter">
+                <span id="charCount">0</span> / 200 characters
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

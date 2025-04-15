@@ -1,0 +1,16 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $message = $_POST['message'];
+    
+    // Sanitize the message
+    $message = htmlspecialchars($message);
+    
+    // Save the message to a file
+    $file = 'messages.txt';
+    file_put_contents($file, $message . PHP_EOL, FILE_APPEND | LOCK_EX);
+    
+    // Redirect back to the form (optional)
+    header("Location: index.html");
+    exit();
+}
+?>
